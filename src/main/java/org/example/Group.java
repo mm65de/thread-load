@@ -41,7 +41,7 @@ public class Group {
     }
 
     private void runMethod(int threadNumber) {
-        System.out.println("starting " + threadNamePrefix + threadNumber);
+        //System.out.println("starting " + threadNamePrefix + threadNumber);
         synchronized (semaphore) {
             try {
                 while (!terminate.get()) {
