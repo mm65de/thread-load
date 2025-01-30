@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="740a55d2-26e7-4584-a13e-45bef9504ba3" name="Changes" comment="First working version - for any defects see readme.txt.">
+    <list default="true" id="740a55d2-26e7-4584-a13e-45bef9504ba3" name="Changes" comment="Fixed two bugs. Now CPU load of each thread is ok. And also the calculation of the count of cores. Added MyThreads to not wait on Thread itself.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/MyThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,24 +94,24 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.ThreadSample [:Main.main()].executor": "Run",
-    "Gradle.ThreadSample [assemble].executor": "Run",
-    "Gradle.ThreadSample [build].executor": "Run",
-    "Gradle.ThreadSample [jar].executor": "Run",
-    "Gradle.ThreadSample [model].executor": "Run",
-    "Gradle.ThreadSample [resolvableConfigurations].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3632184",
-    "settings.editor.selected.configurable": "Debugger_Data_Views_Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.ThreadSample [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadSample [assemble].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadSample [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadSample [jar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadSample [model].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ThreadSample [resolvableConfigurations].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3632184&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Debugger_Data_Views_Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.ThreadSample [jar]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -237,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738156662478</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Reduce debug output.">
+      <option name="closed" value="true" />
+      <created>1738156746835</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738156746835</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,24 +277,27 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First working version - for any defects see readme.txt." />
-    <option name="LAST_COMMIT_MESSAGE" value="First working version - for any defects see readme.txt." />
+    <MESSAGE value="Reduce debug output." />
+    <MESSAGE value="Fixed two bugs. Now CPU load of each thread is ok. And also the calculation of the count of cores." />
+    <MESSAGE value="Fixed two bugs. Now CPU load of each thread is ok. And also the calculation of the count of cores. Added MyThreads to not wait on Thread itself." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed two bugs. Now CPU load of each thread is ok. And also the calculation of the count of cores. Added MyThreads to not wait on Thread itself." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>40</line>
+          <line>44</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Group.java</url>
-          <line>48</line>
+          <line>47</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Group.java</url>
-          <line>47</line>
+          <line>46</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
