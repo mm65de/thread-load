@@ -6,8 +6,10 @@ plugins {
 group = 'org.example'
 version = '1.1'
 
+
 application {
     mainClass = 'org.example.Main'
+    sourceCompatibility = '1.8'
 }
 
 repositories {
