@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="740a55d2-26e7-4584-a13e-45bef9504ba3" name="Changes" comment="Remove dead code.">
+    <list default="true" id="740a55d2-26e7-4584-a13e-45bef9504ba3" name="Changes" comment="Java source compatibility 1.8">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +104,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mmueller/Downloads/07.01.2025-2.zip/07.01.2025-2/07.01.2025/smartid_dump4.hprof",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3632184",
@@ -263,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738241567227</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Java source compatibility 1.8">
+      <option name="closed" value="true" />
+      <created>1738242870863</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738242870863</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,7 +304,8 @@
     <MESSAGE value="Fixed two bugs. Now CPU load of each thread is ok. And also the calculation of the count of cores." />
     <MESSAGE value="Fixed two bugs. Now CPU load of each thread is ok. And also the calculation of the count of cores. Added MyThreads to not wait on Thread itself." />
     <MESSAGE value="Remove dead code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove dead code." />
+    <MESSAGE value="Java source compatibility 1.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java source compatibility 1.8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
