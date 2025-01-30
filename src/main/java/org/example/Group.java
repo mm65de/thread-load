@@ -30,12 +30,6 @@ public class Group {
 
     private Runnable buildRunnable(final int threadIndex) {
         return () -> runMethod(threadIndex);
-//        return new Runnable() {
-//            @Override
-//            public void run() {
-//                runMethod(threadIndex);
-//            }
-//        };
     }
 
     private void runMethod(int threadIndex) {
