@@ -1,0 +1,36 @@
+plugins {
+    //id 'java'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.1'
+
+
+application {
+    mainClass = 'org.example.Main'
+    sourceCompatibility = '1.8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+jar {
+    manifest {
+        attributes(
+                //'Class-Path': configurations.runtimeOnly.collect { it.getName() }.join(' '),
+                'Main-Class': 'org.example.Main'
+        )
+    }
+}
