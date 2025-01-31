@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3213ca7c-f5d8-496b-9421-1c3658834063" name="Changes" comment="" />
+    <list default="true" id="3213ca7c-f5d8-496b-9421-1c3658834063" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/threadload/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadload/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadload/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadload/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadload/.idea/shelf/Uncommitted_changes_before_Update_at_2025-01-31_01_21_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadload/.idea/shelf/Uncommitted_changes_before_Update_at_2025-01-31_01_21__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadload/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadload/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadload/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,23 +62,23 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2sN6dal2es5o1JHwGNMJkz5u83B" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.threadload [:Main.main()].executor": "Run",
-    "Gradle.threadload [jar].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.threadload [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.threadload [jar].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.mm65.threadload.Main" />
@@ -107,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.threadload [jar]" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
