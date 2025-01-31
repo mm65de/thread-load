@@ -24,6 +24,6 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
 
       - name: Build and publish the project
-        run: ./gradlew --warning-mode all test jar publish
+        run: cd threadload && ./gradlew --warning-mode all test jar publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
