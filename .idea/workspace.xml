@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3213ca7c-f5d8-496b-9421-1c3658834063" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/threadload/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadload/.idea/checkstyle-idea.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadload/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadload/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadload/.idea/shelf/Uncommitted_changes_before_Update_at_2025-01-31_01_21_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadload/.idea/shelf/Uncommitted_changes_before_Update_at_2025-01-31_01_21__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadload/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadload/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/threadload/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="3213ca7c-f5d8-496b-9421-1c3658834063" name="Changes" comment="Add screenshot" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,15 +60,16 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.threadload [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.threadload [jar].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.threadload [:Main.main()].executor": "Run",
+    "Gradle.threadload [jar].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Gradle.threadload [jar]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.mm65.threadload.Main" />
@@ -131,6 +122,19 @@
       <option name="presentableId" value="Default" />
       <updated>1738283774698</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add screenshot">
+      <option name="closed" value="true" />
+      <created>1738286523843</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738286523843</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add screenshot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add screenshot" />
   </component>
 </project>
