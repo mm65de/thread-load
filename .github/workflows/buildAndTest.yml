@@ -23,7 +23,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Build and publish the project
-        run: cd threadload && chmod +x gradlew && ./gradlew --warning-mode all test jar publish
+      - name: Build and test the project
+        run: cd threadload && chmod +x gradlew && ./gradlew --warning-mode all test jar 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
