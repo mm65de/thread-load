@@ -1,14 +1,13 @@
 plugins {
-    //id 'java'
     id 'application'
 }
 
-group = 'org.example'
+group = 'de.mm65'
 version = '1.1'
 
 
 application {
-    mainClass = 'org.example.Main'
+    mainClass = 'de.mm65.threadload.Main'
     sourceCompatibility = '1.8'
 }
 
@@ -25,12 +24,12 @@ test {
     useJUnitPlatform()
 }
 
-
 jar {
     manifest {
         attributes(
                 //'Class-Path': configurations.runtimeOnly.collect { it.getName() }.join(' '),
-                'Main-Class': 'org.example.Main'
+                'Main-Class': 'de.mm65.threadload.Main'
         )
     }
 }
+

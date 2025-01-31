@@ -1,4 +1,4 @@
-package org.example;
+package de.mm65.threadload;
 
 import java.util.ArrayList;
 import java.util.List;

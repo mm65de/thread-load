@@ -1,4 +1,4 @@
-package org.example;
+package de.mm65.threadload;
 
 /**
  * You should not use wait() and notify() on instances of java.lang.Thread because this could interfere
@@ -13,7 +13,8 @@ public class MyThread {
     }
 
     public String threadDescription() {
-        return thread.getName() + " (" + thread.threadId() + ") ";
+        return thread.getName() + " (" + thread.getId() + ") ";
+        // since Java 19:   return thread.getName() + " (" + thread.threadId() + ") ";
     }
 
     public void start() {

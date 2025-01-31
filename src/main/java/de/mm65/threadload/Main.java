@@ -1,4 +1,4 @@
-package org.example;
+package de.mm65.threadload;
 
 import java.io.IOException;
 import java.text.MessageFormat;
