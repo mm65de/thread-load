@@ -9,7 +9,7 @@ This is a sample Java application that detects the count of CPU cores and create
 
 The Java source compatibility of this project is set to 1.8.
 
-The application can be started via: `java -jar Thread-Load.jar`
+The application can be started via: `java -jar threadload-1.1.jar`
 
 # Monitor the thread load with top or htop under Linux
 
