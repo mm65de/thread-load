@@ -14,3 +14,5 @@ The application can be started via: `java -jar threadload-1.1.jar`
 # Monitor the thread load with top or htop under Linux
 
 Other than the TaskManager of Windows, where you at most see the count of threads, top and htop allow to show the threads of the Java application and the CPU that each thread causes.
+
+![screenshot of top](threadload.png)
