@@ -1,0 +1,253 @@
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\n    //id 'java'\n    id 'application'\n}\n\ngroup = 'org.example'\nversion = '1.1'\n\n\napplication {\n    mainClass = 'org.example.Main'\n    sourceCompatibility = '1.8'\n}\n\nrepositories {\n    mavenCentral()\n}\n\ndependencies {\n    testImplementation platform('org.junit:junit-bom:5.9.1')\n    testImplementation 'org.junit.jupiter:junit-jupiter'\n}\n\ntest {\n    useJUnitPlatform()\n}\n\n\njar {\n    manifest {\n        attributes(\n                //'Class-Path': configurations.runtimeOnly.collect { it.getName() }.join(' '),\n                'Main-Class': 'org.example.Main'\n        )\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	(revision 3fceec06b3a1a017288447e9a0f9726a7330ea86)
++++ b/build.gradle	(date 1738282814261)
+@@ -1,14 +1,13 @@
+ plugins {
+-    //id 'java'
+     id 'application'
+ }
+ 
+-group = 'org.example'
++group = 'de.mm65'
+ version = '1.1'
+ 
+ 
+ application {
+-    mainClass = 'org.example.Main'
++    mainClass = 'de.mm65.threadload.Main'
+     sourceCompatibility = '1.8'
+ }
+ 
+@@ -25,12 +24,12 @@
+     useJUnitPlatform()
+ }
+ 
+-
+ jar {
+     manifest {
+         attributes(
+                 //'Class-Path': configurations.runtimeOnly.collect { it.getName() }.join(' '),
+-                'Main-Class': 'org.example.Main'
++                'Main-Class': 'de.mm65.threadload.Main'
+         )
+     }
+ }
++
+Index: src/main/java/org/example/Group.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Group.java b/src/main/java/de/mm65/threadload/Group.java
+rename from src/main/java/org/example/Group.java
+rename to src/main/java/de/mm65/threadload/Group.java
+--- a/src/main/java/org/example/Group.java	(revision 3fceec06b3a1a017288447e9a0f9726a7330ea86)
++++ b/src/main/java/de/mm65/threadload/Group.java	(date 1738282608525)
+@@ -1,4 +1,4 @@
+-package org.example;
++package de.mm65.threadload;
+ 
+ import java.util.ArrayList;
+ import java.util.List;
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Sample Java application with several threads that place different loads on the CPU\n\nThis is a sample Java application that detects the count of CPU cores and creates the same amount of thread group.\n\n* The first thread group contains only one thread and this threads causes a load of 100 % on one CPU core.\n* The second thread group contains two threads. Both threads together cause a load of 100 % on one CPU core. The load of these threads are in a numerical ratio of 1:2.\n* The third thread group contains three threads. All three threads together cause a load of 100 % on one CPU core. The load of these threads are in a numerical ratio of 1:2:3.\n* Etc.\n\nThe Java source compatibility of this project is set to 1.8.\n\nThe application can be started via: `java -jar Thread-Load.jar`\n\n# Monitor the thread load with top or htop under Linux\n\nOther than the TaskManager of Windows, where you at most see the count of threads, top and htop allow to show the threads of the Java application and the CPU that each thread causes.\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision 3fceec06b3a1a017288447e9a0f9726a7330ea86)
++++ b/README.md	(date 1738282608499)
+@@ -9,7 +9,7 @@
+ 
+ The Java source compatibility of this project is set to 1.8.
+ 
+-The application can be started via: `java -jar Thread-Load.jar`
++The application can be started via: `java -jar threadload-1.1.jar`
+ 
+ # Monitor the thread load with top or htop under Linux
+ 
+Index: settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>rootProject.name = 'ThreadSample'\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/settings.gradle b/settings.gradle
+--- a/settings.gradle	(revision 3fceec06b3a1a017288447e9a0f9726a7330ea86)
++++ b/settings.gradle	(date 1738282608535)
+@@ -1,2 +1,2 @@
+-rootProject.name = 'ThreadSample'
++rootProject.name = 'threadload'
+ 
+Index: src/main/java/org/example/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Main.java b/src/main/java/de/mm65/threadload/Main.java
+rename from src/main/java/org/example/Main.java
+rename to src/main/java/de/mm65/threadload/Main.java
+--- a/src/main/java/org/example/Main.java	(revision 3fceec06b3a1a017288447e9a0f9726a7330ea86)
++++ b/src/main/java/de/mm65/threadload/Main.java	(date 1738282608542)
+@@ -1,4 +1,4 @@
+-package org.example;
++package de.mm65.threadload;
+ 
+ import java.io.IOException;
+ import java.text.MessageFormat;
+Index: src/main/java/org/example/MyThread.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/MyThread.java b/src/main/java/de/mm65/threadload/MyThread.java
+rename from src/main/java/org/example/MyThread.java
+rename to src/main/java/de/mm65/threadload/MyThread.java
+--- a/src/main/java/org/example/MyThread.java	(revision 3fceec06b3a1a017288447e9a0f9726a7330ea86)
++++ b/src/main/java/de/mm65/threadload/MyThread.java	(date 1738282608508)
+@@ -1,4 +1,4 @@
+-package org.example;
++package de.mm65.threadload;
+ 
+ /**
+  * You should not use wait() and notify() on instances of java.lang.Thread because this could interfere
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"740a55d2-26e7-4584-a13e-45bef9504ba3\" name=\"Changes\" comment=\"Java source compatibility 1.8\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ExternalProjectsData\">\n    <projectState path=\"$PROJECT_DIR$\">\n      <ProjectState />\n    </projectState>\n  </component>\n  <component name=\"ExternalProjectsManager\">\n    <system id=\"GRADLE\">\n      <state>\n        <task path=\"$PROJECT_DIR$\">\n          <activation />\n        </task>\n        <projects_view>\n          <tree_state>\n            <expand>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"ThreadSample\" type=\"f1a62948:ProjectNode\" />\n              </path>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"ThreadSample\" type=\"f1a62948:ProjectNode\" />\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\n              </path>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"ThreadSample\" type=\"f1a62948:ProjectNode\" />\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\n                <item name=\"build\" type=\"c8890929:TasksNode$1\" />\n              </path>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"ThreadSample\" type=\"f1a62948:ProjectNode\" />\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\n                <item name=\"build setup\" type=\"c8890929:TasksNode$1\" />\n              </path>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"ThreadSample\" type=\"f1a62948:ProjectNode\" />\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\n                <item name=\"documentation\" type=\"c8890929:TasksNode$1\" />\n              </path>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"ThreadSample\" type=\"f1a62948:ProjectNode\" />\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\n                <item name=\"help\" type=\"c8890929:TasksNode$1\" />\n              </path>\n              <path>\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\n                <item name=\"ThreadSample\" type=\"f1a62948:ProjectNode\" />\n                <item name=\"Tasks\" type=\"e4a08cd1:TasksNode\" />\n                <item name=\"other\" type=\"c8890929:TasksNode$1\" />\n              </path>\n            </expand>\n            <select />\n          </tree_state>\n        </projects_view>\n      </state>\n    </system>\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 8\n}</component>\n  <component name=\"ProjectId\" id=\"2s34qpIOfR7K06Sa8OzCq8Yv41d\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Gradle.Build ThreadSample.executor\": \"Run\",\n    \"Gradle.ThreadSample [:Main.main()].executor\": \"Run\",\n    \"Gradle.ThreadSample [assemble].executor\": \"Run\",\n    \"Gradle.ThreadSample [build].executor\": \"Run\",\n    \"Gradle.ThreadSample [jar].executor\": \"Run\",\n    \"Gradle.ThreadSample [model].executor\": \"Run\",\n    \"Gradle.ThreadSample [resolvableConfigurations].executor\": \"Run\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SONARLINT_PRECOMMIT_ANALYSIS\": \"true\",\n    \"kotlin-language-version-configured\": \"true\",\n    \"last_opened_file_path\": \"C:/Users/mmueller/Downloads/07.01.2025-2.zip/07.01.2025-2/07.01.2025/smartid_dump4.hprof\",\n    \"project.structure.last.edited\": \"Project\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.3632184\",\n    \"settings.editor.selected.configurable\": \"reference.projectsettings.compiler.javacompiler\"\n  }\n}]]></component>\n  <component name=\"RunManager\" selected=\"Gradle.ThreadSample [jar]\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"org.example.Main\" />\n      <module name=\"ThreadSample.main\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"org.example.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"ThreadSample [assemble]\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\n      <ExternalSystemSettings>\n        <option name=\"executionName\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\n        <option name=\"scriptParameters\" />\n        <option name=\"taskDescriptions\">\n          <list />\n        </option>\n        <option name=\"taskNames\">\n          <list>\n            <option value=\"assemble\" />\n          </list>\n        </option>\n        <option name=\"vmOptions\" />\n      </ExternalSystemSettings>\n      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\n      <DebugAllEnabled>false</DebugAllEnabled>\n      <RunAsTest>false</RunAsTest>\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"ThreadSample [jar]\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\n      <ExternalSystemSettings>\n        <option name=\"executionName\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\n        <option name=\"scriptParameters\" />\n        <option name=\"taskDescriptions\">\n          <list />\n        </option>\n        <option name=\"taskNames\">\n          <list>\n            <option value=\"jar\" />\n          </list>\n        </option>\n        <option name=\"vmOptions\" />\n      </ExternalSystemSettings>\n      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\n      <DebugAllEnabled>false</DebugAllEnabled>\n      <RunAsTest>false</RunAsTest>\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"ThreadSample [model]\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\n      <ExternalSystemSettings>\n        <option name=\"executionName\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\n        <option name=\"scriptParameters\" />\n        <option name=\"taskDescriptions\">\n          <list />\n        </option>\n        <option name=\"taskNames\">\n          <list>\n            <option value=\"model\" />\n          </list>\n        </option>\n        <option name=\"vmOptions\" />\n      </ExternalSystemSettings>\n      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\n      <DebugAllEnabled>false</DebugAllEnabled>\n      <RunAsTest>false</RunAsTest>\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"ThreadSample [resolvableConfigurations]\" type=\"GradleRunConfiguration\" factoryName=\"Gradle\" temporary=\"true\">\n      <ExternalSystemSettings>\n        <option name=\"executionName\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"externalSystemIdString\" value=\"GRADLE\" />\n        <option name=\"scriptParameters\" />\n        <option name=\"taskDescriptions\">\n          <list />\n        </option>\n        <option name=\"taskNames\">\n          <list>\n            <option value=\"resolvableConfigurations\" />\n          </list>\n        </option>\n        <option name=\"vmOptions\" />\n      </ExternalSystemSettings>\n      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>\n      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>\n      <DebugAllEnabled>false</DebugAllEnabled>\n      <RunAsTest>false</RunAsTest>\n      <method v=\"2\" />\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Gradle.ThreadSample [jar]\" />\n        <item itemvalue=\"Application.Main\" />\n        <item itemvalue=\"Gradle.ThreadSample [resolvableConfigurations]\" />\n        <item itemvalue=\"Gradle.ThreadSample [model]\" />\n        <item itemvalue=\"Gradle.ThreadSample [assemble]\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"740a55d2-26e7-4584-a13e-45bef9504ba3\" name=\"Changes\" comment=\"\" />\n      <created>1737671120784</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1737671120784</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"First working version - for any defects see readme.txt.\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1738156662478</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1738156662478</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Reduce debug output.\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1738156746835</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1738156746835</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Fixed two bugs. Now CPU load of each thread is ok. And also the calculation of the count of cores. Added MyThreads to not wait on Thread itself.\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1738241528557</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1738241528557</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Remove dead code.\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1738241567227</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1738241567227</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Java source compatibility 1.8\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1738242870863</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1738242870863</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"6\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"FILTERS\">\n                <map>\n                  <entry key=\"branch\">\n                    <value>\n                      <list>\n                        <option value=\"main\" />\n                      </list>\n                    </value>\n                  </entry>\n                </map>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"First working version - for any defects see readme.txt.\" />\n    <MESSAGE value=\"Reduce debug output.\" />\n    <MESSAGE value=\"Fixed two bugs. Now CPU load of each thread is ok. And also the calculation of the count of cores.\" />\n    <MESSAGE value=\"Fixed two bugs. Now CPU load of each thread is ok. And also the calculation of the count of cores. Added MyThreads to not wait on Thread itself.\" />\n    <MESSAGE value=\"Remove dead code.\" />\n    <MESSAGE value=\"Java source compatibility 1.8\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Java source compatibility 1.8\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint suspend=\"THREAD\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>\n          <line>44</line>\n          <option name=\"timeStamp\" value=\"14\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/main/java/org/example/Group.java</url>\n          <line>41</line>\n          <option name=\"timeStamp\" value=\"19\" />\n        </line-breakpoint>\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/main/java/org/example/Group.java</url>\n          <line>40</line>\n          <option name=\"timeStamp\" value=\"20\" />\n        </line-breakpoint>\n      </breakpoints>\n      <breakpoints-defaults>\n        <breakpoint suspend=\"THREAD\" type=\"java-line\" />\n      </breakpoints-defaults>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3fceec06b3a1a017288447e9a0f9726a7330ea86)
++++ b/.idea/workspace.xml	(date 1738282733320)
+@@ -5,8 +5,13 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="740a55d2-26e7-4584-a13e-45bef9504ba3" name="Changes" comment="Java source compatibility 1.8">
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/mm65/threadload/Group.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/mm65/threadload/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MyThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/mm65/threadload/MyThread.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -29,40 +34,22 @@
+             <expand>
+               <path>
+                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="ThreadSample" type="f1a62948:ProjectNode" />
++                <item name="threadload" type="f1a62948:ProjectNode" />
+               </path>
+               <path>
+                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="ThreadSample" type="f1a62948:ProjectNode" />
++                <item name="threadload" type="f1a62948:ProjectNode" />
+                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+               </path>
+               <path>
+                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="ThreadSample" type="f1a62948:ProjectNode" />
++                <item name="threadload" type="f1a62948:ProjectNode" />
+                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                 <item name="build" type="c8890929:TasksNode$1" />
+               </path>
+               <path>
+                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="ThreadSample" type="f1a62948:ProjectNode" />
+-                <item name="Tasks" type="e4a08cd1:TasksNode" />
+-                <item name="build setup" type="c8890929:TasksNode$1" />
+-              </path>
+-              <path>
+-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="ThreadSample" type="f1a62948:ProjectNode" />
+-                <item name="Tasks" type="e4a08cd1:TasksNode" />
+-                <item name="documentation" type="c8890929:TasksNode$1" />
+-              </path>
+-              <path>
+-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="ThreadSample" type="f1a62948:ProjectNode" />
+-                <item name="Tasks" type="e4a08cd1:TasksNode" />
+-                <item name="help" type="c8890929:TasksNode$1" />
+-              </path>
+-              <path>
+-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="ThreadSample" type="f1a62948:ProjectNode" />
++                <item name="threadload" type="f1a62948:ProjectNode" />
+                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                 <item name="other" type="c8890929:TasksNode$1" />
+               </path>
+@@ -83,6 +70,9 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 8
+ }</component>
+@@ -104,7 +94,7 @@
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+     "kotlin-language-version-configured": "true",
+-    "last_opened_file_path": "C:/Users/mmueller/Downloads/07.01.2025-2.zip/07.01.2025-2/07.01.2025/smartid_dump4.hprof",
++    "last_opened_file_path": "C:/dev/github/thread-load",
+     "project.structure.last.edited": "Project",
+     "project.structure.proportion": "0.15",
+     "project.structure.side.proportion": "0.3632184",
+@@ -213,6 +203,19 @@
+       <RunAsTest>false</RunAsTest>
+       <method v="2" />
+     </configuration>
++    <configuration default="true" type="JetRunConfigurationType">
++      <module name="ThreadSample" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
++      <module name="ThreadSample" />
++      <option name="filePath" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <recent_temporary>
+       <list>
+         <item itemvalue="Gradle.ThreadSample [jar]" />
+@@ -311,17 +314,17 @@
+     <breakpoint-manager>
+       <breakpoints>
+         <line-breakpoint suspend="THREAD" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
++          <url>file://$PROJECT_DIR$/src/main/java/de/mm65/threadload/Main.java</url>
+           <line>44</line>
+           <option name="timeStamp" value="14" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Group.java</url>
++          <url>file://$PROJECT_DIR$/src/main/java/de/mm65/threadload/Group.java</url>
+           <line>41</line>
+           <option name="timeStamp" value="19" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Group.java</url>
++          <url>file://$PROJECT_DIR$/src/main/java/de/mm65/threadload/Group.java</url>
+           <line>40</line>
+           <option name="timeStamp" value="20" />
+         </line-breakpoint>
